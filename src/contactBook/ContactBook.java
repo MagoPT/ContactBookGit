@@ -2,6 +2,9 @@ package contactBook;
 
 import contactBook.Contact;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class ContactBook {
     static final int DEFAULT_SIZE = 100;
 
@@ -56,6 +59,16 @@ public class ContactBook {
             if (contact.getPhone() == phone) return contact.getName();
         }
         return null;
+    }
+
+    public boolean checkRepeatedNumbers() {
+        Map<Integer, Integer> numTot = new HashMap<>();
+        for (int i = 0; i < counter; i++) {
+            Contact contact = contacts[i];
+            if (numTot.containsKey(contact.getPhone())) return true;
+            else numTot.put(contact.getPhone(),1);
+        }
+        return false;
     }
 
     //Pre: name != null && hasContact(name)
