@@ -53,6 +53,7 @@ public class ContactBook {
         return contacts[searchIndex(name)].getEmail();
     }
 
+    //Pre: phone != null
     public String getName(int phone) {
         for (int i = 0; i < counter; i++) {
             Contact contact = contacts[i];
