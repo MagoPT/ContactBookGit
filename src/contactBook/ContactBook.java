@@ -51,7 +51,8 @@ public class ContactBook {
     }
 
     public String getName(int phone) {
-        for (Contact contact:contacts) {
+        for (int i = 0; i < counter; i++) {
+            Contact contact = contacts[i];
             if (contact.getPhone() == phone) return contact.getName();
         }
         return null;
