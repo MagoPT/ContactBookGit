@@ -11,6 +11,7 @@ import java.util.Locale;
 import org.junit.Before;
 import org.junit.Test;
 
+
 /**
  * A classe Tests especifica um conjunto de testes implementado recorrendo à ferramenta 
  * JUnit. Estes testes usam como input os ficheiros de teste do Mooshak, gerando, como

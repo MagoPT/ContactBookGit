@@ -50,6 +50,14 @@ public class ContactBook {
         return contacts[searchIndex(name)].getEmail();
     }
 
+    public String getName(int phone) {
+        for (int i = 0; i < counter; i++) {
+            Contact contact = contacts[i];
+            if (contact.getPhone() == phone) return contact.getName();
+        }
+        return null;
+    }
+
     //Pre: name != null && hasContact(name)
     public void setPhone(String name, int phone) {
         contacts[searchIndex(name)].setPhone(phone);
